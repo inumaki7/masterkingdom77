@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="logo.jpg" type="image/png">
+  <title>تصنيفات مملكة ماستر</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+  <style>
+    :root {
+      --main-gold: #FFD700;
+      --hover-gold: #e6c200;
+      --dark-bg: #0d0d0d;
+      --card-bg: #121212;
+      --card-hover-bg: #1c1c1c;
+      --card-border: #FFD700;
+      --card-hover-border: #ffd700cc;
+      --text-muted: #bbb;
+      --footer-text: #aaa;
+      --footer-border: #444;
+    }
+    body {
+      margin: 0;
+      font-family: 'Tajawal', sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--main-gold);
+      transition: all 0.4s ease;
+    }
+    .dark-mode {
+      background-color: var(--dark-bg);
+      color: var(--main-gold);
+    }
+    .light-mode {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      background: linear-gradient(to bottom, #111 60%, #1a1a1a);
+      border-bottom: 3px solid var(--main-gold);
+      box-shadow: 0 4px 10px rgba(255, 215, 0, 0.1);
+    }
+    header h1 {
+      font-size: 2.8em;
+      margin: 0;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px var(--main-gold);
+    }
+    header p {
+      margin-top: 15px;
+      font-size: 1.2em;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #ccc;
+    }
+    .toggle-mode {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1001;
+      padding: 10px 18px;
+      background-color: var(--main-gold);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .toggle-mode:hover {
+      background-color: var(--hover-gold);
+      transform: scale(1.05);
+    }
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+    .levels-section {
+      margin-bottom: 60px;
+      padding: 0 20px;
+    }
+    .level-item {
+      background-color: var(--card-bg);
+      border: 2px solid var(--card-border);
+      border-radius: 12px;
+      padding: 18px 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 6px 16px rgba(255, 215, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+    .level-item:hover {
+      transform: translateY(-4px);
+      background-color: var(--card-hover-bg);
+      border-color: var(--card-hover-border);
+      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2);
+    }
+    .level-title {
+      color: var(--main-gold);
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+    .level-desc {
+      margin-top: 8px;
+      font-size: 0.95em;
+      color: var(--text-muted);
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: var(--footer-text);
+      border-top: 1px solid var(--footer-border);
+      margin-top: 60px;
+    }
+    .home-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--main-gold);
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+    .home-button:hover {
+      background-color: var(--hover-gold);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="dark-mode">
+  <header>
+    <h1>『𝑴.𝑺.𝑹⊰🌟⊱𝑳𝑬𝑽𝑬𝑳𝑺』</h1>
+    <p>نظام تصنيف النقابات في مملكة ماستر</p>
+    <div style="margin-top: 20px;">
+      <a href="index.html" class="home-button">
+        <i class="fas fa-home"></i> الصفحة الرئيسية
+      </a>
+    </div>
+  </header>
+  <button class="toggle-mode" onclick="toggleMode()" id="mode-toggle">
+    <i class="fas fa-moon"></i> وضع مظلم
+  </button>
+  <div class="container">
+    <div class="levels-section">
+      <div class="level-item">
+        <div class="level-title">〄↫ نظـام تصنيف النقابات🌟 ┋شرح مختصر 🔰┋</div>
+        <div class="level-desc">↫ تصنيف النقابات يعتمد على قوتها، ولكل تصنيف شروط محددة وامتيازات. التصنيفات المُعتمدة هي أربع درجات.</div>
+      </div>
+      <div class="level-item">
+        <div class="level-title">┋التصنيفات 🏅┋</div>
+        <div class="level-desc">
+          ↫ المستوى S: نقابات قوية<br>
+          ↫ المستوى A: نقابات شبه قوية<br>
+          ↫ المستوى B: نقابات متوسطة<br>
+          ↫ المستوى C: نقابات ضعيفة
+        </div>
+      </div>
+      <div class="level-item">
+        <div class="level-title">┋شروط التصنيفات 🗞┋</div>
+        <div class="level-desc">
+          <p>↫ كل تصنيف له شروط وأي نقابة تحققها تنتقل إليه بعد تأكيد الإدارة العليا 👑</p>
+          <strong>↫ المستوى S 🦁:</strong>
+          <ul dir="rtl">
+            <li>تفاعل فوق 16 ألف (بدون سبام).</li>
+            <li>+250 عضو مع تجديد المتفاعلين.</li>
+            <li>مشرفون فوق 30.</li>
+            <li>فروع قوية.</li>
+            <li>احترام قوانين المملكة.</li>
+          </ul>
+          <strong>↫ المستوى A 🐺:</strong>
+          <ul dir="rtl">
+            <li>تفاعل فوق 14 ألف.</li>
+            <li>+200 عضو مع تجديد المتفاعلين.</li>
+            <li>مشرفون فوق 25.</li>
+            <li>فروع جيدة.</li>
+            <li>احترام القوانين.</li>
+          </ul>
+          <strong>↫ المستوى B 🦅:</strong>
+          <ul dir="rtl">
+            <li>تفاعل فوق 12 ألف.</li>
+            <li>+150 عضو مع تجديد المتفاعلين.</li>
+            <li>مشرفون فوق 20.</li>
+            <li>فروع متوسطة.</li>
+            <li>احترام القوانين.</li>
+          </ul>
+          <strong>↫ المستوى C 🦊:</strong>
+          <ul dir="rtl">
+            <li>تفاعل فوق 10 آلاف.</li>
+            <li>أقل من 120 عضو.</li>
+            <li>15 مشرف أو أقل.</li>
+            <li>فروع متوسطة أو ضعيفة.</li>
+            <li>احترام القوانين.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="level-item">
+        <div class="level-title">〄↫ المؤسس: اوبــيتـو 👑</div>
+      </div>
+    </div>
+  </div>
+  <footer>
+    &copy; 2025 مملكة ماستر - جميع الحقوق محفوظة
+    <br>
+    مع تحيات المبرمج اينوماكي من نقابه الفوريا🏯🤍
+  </footer>
+  <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+    function toggleMode() {
+      const body = document.body;
+      const icon = document.querySelector('#mode-toggle i');
+      const label = document.querySelector('#mode-toggle');
+      if (body.classList.contains("dark-mode")) {
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+        icon.className = "fas fa-sun";
+        label.innerHTML = '<i class="fas fa-sun"></i> وضع نهاري';
+      } else {
+        body.classList.remove("light-mode");
+        body.classList.add("dark-mode");
+        icon.className = "fas fa-moon";
+        label.innerHTML = '<i class="fas fa-moon"></i> وضع مظلم';
+      }
+    }
+  </script>
+</body>
+</html>

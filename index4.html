@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="icon" href="logo.jpg" type="image/png">
+  <title>قوانين مملكة ماستر</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css " />
+
+  <!-- AOS Animation CSS -->
+  <link href="https://unpkg.com/aos @2.3.4/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    /* =================== */
+    /* == ألوان التصميم == */
+    /* =================== */
+
+    :root {
+      --main-gold: #FFD700;
+      --hover-gold: #e6c200;
+      --dark-bg: #0d0d0d;
+      --card-bg: #121212;
+      --card-hover-bg: #1c1c1c;
+      --card-border: #FFD700;
+      --card-hover-border: #ffd700cc;
+      --text-muted: #bbb;
+      --footer-text: #aaa;
+      --footer-border: #444;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'Tajawal', sans-serif;
+      background-color: var(--dark-bg);
+      color: var(--main-gold);
+      transition: all 0.4s ease;
+    }
+
+    .dark-mode {
+      background-color: var(--dark-bg);
+      color: var(--main-gold);
+    }
+
+    .light-mode {
+      background-color: #f9f9f9;
+      color: #333;
+    }
+
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+      position: relative;
+      background: linear-gradient(to bottom, #111 60%, #1a1a1a);
+      border-bottom: 3px solid var(--main-gold);
+      box-shadow: 0 4px 10px rgba(255, 215, 0, 0.1);
+    }
+
+    header h1 {
+      font-size: 2.8em;
+      margin: 0;
+      letter-spacing: 2px;
+      text-shadow: 0 0 10px var(--main-gold);
+    }
+
+    header p {
+      margin-top: 15px;
+      font-size: 1.2em;
+      max-width: 800px;
+      margin-left: auto;
+      margin-right: auto;
+      color: #ccc;
+    }
+
+    .toggle-mode {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1001;
+      padding: 10px 18px;
+      background-color: var(--main-gold);
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+      transition: all 0.3s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .toggle-mode:hover {
+      background-color: var(--hover-gold);
+      transform: scale(1.05);
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+    }
+
+    .rules-section {
+      margin-bottom: 60px;
+      padding: 0 20px;
+    }
+
+    .rules-section h2 {
+      font-size: 2.2em;
+      color: var(--main-gold);
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .rules-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .rule-item {
+      background-color: var(--card-bg);
+      border: 2px solid var(--card-border);
+      border-radius: 12px;
+      padding: 18px 24px;
+      margin-bottom: 18px;
+      box-shadow: 0 6px 16px rgba(255, 215, 0, 0.08);
+      transition: all 0.3s ease;
+    }
+
+    .rule-item:hover {
+      transform: translateY(-4px);
+      background-color: var(--card-hover-bg);
+      border-color: var(--card-hover-border);
+      box-shadow: 0 8px 20px rgba(255, 215, 0, 0.2);
+    }
+
+    .rule-number {
+      color: var(--main-gold);
+      font-weight: bold;
+      font-size: 1.1em;
+    }
+
+    .rule-desc {
+      margin-top: 8px;
+      font-size: 0.95em;
+      color: var(--text-muted);
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 14px;
+      color: var(--footer-text);
+      border-top: 1px solid var(--footer-border);
+      margin-top: 60px;
+    }
+
+    .home-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: var(--main-gold);
+      color: #000;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+      box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+      transition: all 0.3s ease;
+    }
+
+    .home-button:hover {
+      background-color: var(--hover-gold);
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body class="dark-mode" data-aos-easing="ease" data-aos-duration="600" data-aos-delay="0">
+  <header>
+    <h1>مملكة ماستر</h1>
+    <p>قوانين مملكتنا الصارمة والمُنظمة!</p>
+    <div style="margin-top: 20px;">
+      <a href="index.html" class="home-button">
+        <i class="fas fa-home"></i> الصفحة الرئيسية
+      </a>
+    </div>
+  </header>
+
+  <!-- زر تبديل الوضع -->
+  <button class="toggle-mode" onclick="toggleMode()" id="mode-toggle">
+    <i class="fas fa-moon"></i> وضع مظلم
+  </button>
+
+  <div class="container">
+    <div class="rules-section" data-aos="fade-up">
+      <h2>📜 قوانين مملكة ماستر</h2>
+
+      <div class="rule-item" data-aos="fade-up">
+        <div class="rule-number">أهلاً وسهلاً بكم في ╎『𝑴𝑨𝑺𝑻𝑬𝑹 ◜🌟◞』</div>
+        <div class="rule-desc"></div>
+      </div>
+
+      <!-- المخالفات -->
+      <div class="rule-item" data-aos="fade-up">
+        <div class="rule-number">『المخالفات (الإنذارات)』</div>
+        <div class="rule-desc">
+          <ol dir="rtl">
+            <li>إرسال GIF قبل الانمي.</li>
+            <li>ممنوع إرسال ملصقات الكيبوب أو ملصقات مخلة بالأداب.</li>
+            <li>ثلاث ملصقات متتالية بدون رسائل = سبام.</li>
+            <li>9 رسائل متتالية منها 3 دون فائدة = سبام.</li>
+            <li>السبام والتشفير.</li>
+            <li>التحدث عن الهنتاي والإيتشي.</li>
+            <li>العنصرية بكل أشكالها.</li>
+            <li>التحدث في الأمور السياسية وغيرها.</li>
+            <li>منع استخدام لهجة غير عامية أو لغة غير عربية.</li>
+            <li>التحدث عن حلقة لم يمر عليها 7 ساعات.</li>
+            <li>التنمر على الأعضاء.</li>
+            <li>تسجيل الصوتية للبنات.</li>
+            <li>الصوتيات عالية الصوت المزعجة.</li>
+            <li>إرسال مقطع خارج الإنمي في يوم غير مفتوح.</li>
+            <li>الحذف.</li>
+            <li>طلب رتبة وإزعاج المسؤولين.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- طرد مؤقت -->
+      <div class="rule-item" data-aos="fade-up">
+        <div class="rule-number">『قوانين الطرد المؤقت』</div>
+        <div class="rule-desc">
+          <ol dir="rtl">
+            <li>الاحتكاك الغير لائق بين الجنسين في الخاص أو العام.</li>
+            <li>الاعتراض على قرارات المشرفين والتدخل فيها.</li>
+          </ol>
+          <p><strong>ملاحظة:</strong> إذا حصلت على إنذارين سيتم تحويلك إلى طرد مؤبد.</p>
+        </div>
+      </div>
+
+      <!-- طرد موبد -->
+      <div class="rule-item" data-aos="fade-up">
+        <div class="rule-number">『قوانين الطرد الموبد』</div>
+        <div class="rule-desc">
+          <ol dir="rtl">
+            <li>الحرق بجميع صوره.</li>
+            <li>النشر لقروب آخر.</li>
+            <li>إرسال أي صورة أو مقطع أو ملصق هنتاي.</li>
+            <li>الدخول بنية التخريب أو سرقة الأعضاء.</li>
+            <li>تهديد الأعضاء بالباند وغيرها.</li>
+            <li>السب والشتم.</li>
+            <li>إرسال أكثر من ملصق دفعة واحدة بنفس الوقت.</li>
+            <li>إرسال صورة لوجهك أو وجه شخص آخر في القروب.</li>
+            <li>افتعال مشاكل متعمدة داخل النقابة.</li>
+            <li>إزعاج شخص في الخاص أو ابتزازه واشتكى عليك.</li>
+            <li>إرسال صورة أو مقطع غير لائق سواء كان من إنمي أو غيره.</li>
+          </ol>
+        </div>
+      </div>
+
+      <!-- تنبيهات مهمة -->
+      <div class="rule-item" data-aos="fade-up">
+        <div class="rule-number">⚠️ تحذيرات مهمة</div>
+        <div class="rule-desc">
+          <ul dir="rtl">
+            <li>ممنوع الخروج والدخول المتكرر.</li>
+            <li>4 إنذارات = طرد لمدة يومين.</li>
+            <li>6 إنذارات = طرد مؤبد.</li>
+            <li>يُحذف الإنذار بعد 3 أيام من أخذه.</li>
+            <li>تكرار نفس الإنذارات يؤدي للطرد المؤبد.</li>
+            <li>في حال الضرورة، يمكن للمشرف تطبيق قانون غير مذكور.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- توقيع -->
+      <div class="rule-item" data-aos="fade-up">
+        <div class="rule-number">مع تحيات إدارة</div>
+        <div class="rule-desc"><strong>╎『𝑴𝑨𝑺𝑻𝑬𝑹 ◜🌟◞</strong></div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 مملكة ماستر - جميع الحقوق محفوظة
+  </footer>
+
+  <!-- JavaScript -->
+  <script src="https://unpkg.com/aos @2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleMode() {
+      const body = document.body;
+      const icon = document.querySelector('#mode-toggle i');
+      const label = document.querySelector('#mode-toggle');
+
+      if (body.classList.contains("dark-mode")) {
+        body.classList.remove("dark-mode");
+        body.classList.add("light-mode");
+        icon.className = "fas fa-sun";
+        label.innerHTML = '<i class="fas fa-sun"></i> وضع نهاري';
+      } else {
+        body.classList.remove("light-mode");
+        body.classList.add("dark-mode");
+        icon.className = "fas fa-moon";
+        label.innerHTML = '<i class="fas fa-moon"></i> وضع مظلم';
+      }
+    }
+  </script>
+</body>
+</html>
