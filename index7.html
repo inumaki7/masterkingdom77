@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <link rel="icon" href="لوغو .jpg" type="image/png">
+  <link rel="icon" href="لوغو .jpg" type="image/png">
   <title>مسؤولين المتجر</title>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500;700&display=swap" rel="stylesheet">
 
   <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css "/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 
   <style>
     :root {
@@ -48,40 +48,40 @@
       text-shadow: 0 0 10px var(--main-gold);
     }
 
-   .back-btn {
-  background-color: var(--main-gold);
-  color: #000;
-  border: none;
-  padding: 10px 16px;
-  border-radius: 8px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
-  transition: all 0.3s ease;
-  text-decoration: none;
-  display: inline-block;
-}
+    .back-btn {
+      background-color: var(--main-gold);
+      color: #000;
+      border: none;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 10px rgba(255, 215, 0, 0.3);
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
 
-.back-btn:hover {
-  background-color: var(--hover-gold);
-  transform: scale(1.05);
-}
+    .back-btn:hover {
+      background-color: var(--hover-gold);
+      transform: scale(1.05);
+    }
 
-.back-btn i {
-  margin-left: 8px;
-}
+    .back-btn i {
+      margin-left: 8px;
+    }
 
     .container {
-      max-width: 1000px;
+      max-width: 1200px;
       margin: auto;
       padding: 40px 20px;
     }
 
     .contact-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
-      margin-top: 30px;
+      justify-content: center;
     }
 
     .contact-card {
@@ -94,6 +94,8 @@
       transition: transform 0.3s ease;
       position: relative;
       color: var(--main-gold);
+      max-width: 320px;
+      margin: auto;
     }
 
     .contact-card:hover {
@@ -129,7 +131,7 @@
     .contact-phone {
       font-size: 1em;
       color: var(--text-muted);
-      margin-bottom: 15px;
+      margin-bottom: 10px;
       direction: ltr;
     }
 
@@ -142,6 +144,7 @@
       border-radius: 6px;
       text-decoration: none;
       transition: all 0.3s ease;
+      margin-top: 10px;
     }
 
     .call-btn:hover {
@@ -158,7 +161,6 @@
       margin-top: 60px;
     }
 
-    /* Toggle Mode Button */
     .toggle-mode {
       position: fixed;
       top: 20px;
@@ -185,55 +187,63 @@
   </style>
 </head>
 <body class="dark-mode">
- <header>
-  <h1> تواصل مع مسؤولين المتجر </h1>
-  <p>اختر أحد الأرقام أدناه للتواصل مع فمسؤولين المتجر</p>
+  <header>
+    <h1> تواصل مع مسؤولين المتجر </h1>
+    <p>اختر أحد الأرقام أدناه للتواصل مع فمسؤولين المتجر</p>
+    <div style="margin-top: 20px;">
+      <a href="index.html" class="back-btn">
+        <i class="fas fa-arrow-left"></i> الصفحة الرئيسية
+      </a>
+    </div>
+  </header>
 
-  <!-- زر العودة للرئيسية -->
-  <div style="margin-top: 20px;">
-    <a href="index.html" class="back-btn">
-      <i class="fas fa-arrow-left"></i> الصفحة الرئيسية
-    </a>
-  </div>
-</header>
-  <!-- زر تبديل الوضع -->
   <button class="toggle-mode" onclick="toggleMode()" id="mode-toggle">
     <i class="fas fa-moon"></i> وضع مظلم
   </button>
 
   <div class="container">
     <div class="contact-grid">
-<!-- Card 1 -->
-<div class="contact-card">
-  <div class="whatsapp-icon"><i class="fab fa-whatsapp"></i></div>
-  <div class="icon-profile"><i class="fas fa-user-cog"></i></div>
-  <h3 class="contact-name">المسؤول الأول:{اوبيتو}</h3>
-  <p class="contact-phone">+212 668-855238</p>
-  <a href="https://wa.me/212668855238" target="_blank" class="call-btn">واتساب</a>
-</div>
 
+      <!-- Card 1 -->
+      <div class="contact-card">
+        <div class="whatsapp-icon"><i class="fab fa-whatsapp"></i></div>
+        <div class="icon-profile"><i class="fas fa-user-cog"></i></div>
+        <h3 class="contact-name">المسؤول الأول: {اوبيتو}</h3>
+        <p class="contact-phone">+212 668-855238</p>
+        <p>مسؤولين الأرقام واشتراكات النقابات</p>
+        <a href="https://wa.me/212668855238" target="_blank" class="call-btn">واتساب</a>
+      </div>
 
-
-<!-- Card 2 -->
-<div class="contact-card">
-  <div class="whatsapp-icon"><i class="fab fa-whatsapp"></i></div>
-  <div class="icon-profile"><i class="fas fa-receipt"></i></div>
-  <h3 class="contact-name">المسؤول الثاني:{كاراكا}</h3>
-  <p class="contact-phone">+964 772 696 0732</p>
-  <a href="https://wa.me/9647726960732" target="_blank" class="call-btn">واتساب</a>
-</div>
-
-
-
+      <!-- Card 2 -->
+      <div class="contact-card">
+        <div class="whatsapp-icon"><i class="fab fa-whatsapp"></i></div>
+        <div class="icon-profile"><i class="fas fa-user-secret"></i></div>
+        <h3 class="contact-name">المسؤول الثاني: {هيسوكا}</h3>
+        <p class="contact-phone">+212 649-157942</p>
+        <p>مسؤولين الأرقام واشتراكات النقابات</p>
+        <a href="https://wa.me/212649157942" target="_blank" class="call-btn">واتساب</a>
+      </div>
 
       <!-- Card 3 -->
       <div class="contact-card">
         <div class="whatsapp-icon"><i class="fab fa-whatsapp"></i></div>
+        <div class="icon-profile"><i class="fas fa-receipt"></i></div>
+        <h3 class="contact-name">المسؤول الثالث: {كاراكا}</h3>
+        <p class="contact-phone">+964 772 696 0732</p>
+        <p>مسؤول عن: اشتراكات نتفلكس، التطبيقات، والألعاب</p>
+        <a href="https://wa.me/9647726960732" target="_blank" class="call-btn">واتساب</a>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="contact-card">
+        <div class="whatsapp-icon"><i class="fab fa-whatsapp"></i></div>
         <div class="icon-profile"><i class="fas fa-headset"></i></div>
-        <h3 class="contact-name">المسؤول الثالث:{اينوماكي}</h3>
+        <h3 class="contact-name">المسؤول الرابع: {اينوماكي}</h3>
         <p class="contact-phone">+962781013619</p>
+        <p>مسؤول خط الدعم الفني لمملكة والموقع</p>
         <a href="https://wa.me/962781013619" target="_blank" class="call-btn">واتساب</a>
       </div>
+
     </div>
   </div>
 
@@ -264,3 +274,4 @@
   </script>
 </body>
 </html>
+
